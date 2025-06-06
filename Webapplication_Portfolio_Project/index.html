@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prathibha Boyapalli - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script>
+      function addRecommendation() {
+        const container = document.getElementById("all_recommendations");
+        const text = document.getElementById("new_recommendation");
+        const newRec = document.createElement("div");
+        newRec.className = "recommendation";
+        newRec.innerHTML = `<span>&#8220;</span>${text.value}<span>&#8221;</span>`;
+        container.appendChild(newRec);
+        text.value = "";
+        showPopup(true);
+      }
+
+      function showPopup(bool) {
+        if (bool) {
+          document.getElementById('popup').style.display = 'flex';
+        } else {
+          document.getElementById('popup').style.display = 'none';
+        }
+      }
+    </script>
+    <style>
+      nav {
+        background-color: #f0f0f0;
+        padding: 10px;
+      }
+      .profile_name {
+        font-size: 24px;
+        font-weight: bold;
+        float: left;
+      }
+      .topdiv {
+        float: right;
+      }
+      .topmenu {
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        transition: all 0.3s ease-in-out;
+      }
+      .topmenu:hover {
+        text-decoration: underline;
+        font-style: italic;
+        color: #0077cc;
+      }
+      .iconbutton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+      .iconbutton img {
+        width: 50px;
+        cursor: pointer;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 30%;
+        left: 40%;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #000;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Prathibha Boyapalli
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="Email Icon"/>
+            boyapalliprathibha306@gmail.com
+          </div>
+          <div style="clear:both;"></div>
+          <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="Phone Icon"/>
+            +1 (463)-273-6225
+          </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <a class="topmenu" href="#projects">Projects</a>
+          <a class="topmenu" href="#skills">Skills</a>
+          <a class="topmenu" href="#recommendations">Recommendations</a>
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://miro.medium.com/max/1400/1*qdAW1TjCN57h1lbuuzvchg.gif" class="profile_image"/>
+      </div>
+      <div>
+          <h1>
+            Hi, I'm Prathibha Boyapalli! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            I am a computer science graduate student at University of Michigan and an experienced full-stack developer.
+            I’ve built scalable microservices, secure authentication systems, and high-availability distributed applications using Java, Spring Boot, HTML/CSS, and more.
+            I’m passionate about cloud security, software engineering, and building meaningful tech solutions.
+          </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>3 years experience</p>
+        </div>  
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+        <div class="skill">
+          <img src="html_finalprojimages/java.png"/>
+          <h6>Java</h6>
+          <p>4 years experience</p>
+        </div>  
+        <div class="skill">
+          <img src="html_finalprojimages/css3.png"/>
+          <h6>CSS</h6>
+          <p>3 year experience</p>
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/node.png"/>
+          <h6>Node Js</h6>
+          <p>2 year experience</p>
+        
+        </div>
+        <div class="skill">
+          <img src="html_finalprojimages/react.png"/>
+          <h6>React</h6>
+          <p>1 year experience</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <div style="clear:both;"></div>
+      <div id="projects-container" class="projects-container">
+        <div class="project-card">
+          <h3>AuthGuard - Secure Identification System</h3>
+          <ul>
+            <li>Developed secure authentication with Java Spring Boot and Hibernate ORM, with MySQL backend</li>
+            <li>Created a responsive UI with HTML, CSS, JavaScript and Bootstrap</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>Sharded Key-Value Store</h3>
+          <ul>
+            <li>Implemented a fault-tolerant distributed system using Raft consensus algorithm and Java</li>
+            <li>Enabled dynamic replication and sharding with 99.99% uptime</li>
+          </ul>
+        </div>
+        <hr>
+        <div class="project-card">
+          <h3>Distributed gRPC Network Layer</h3>
+          <ul>
+            <li>Engineered a C++ based gRPC system to handle 50+ clients with shared memory IPC</li>
+            <li>Added task scheduling, health monitoring and graceful shutdown features</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Prathibha is a quick problem solver and a great team collaborator. Her understanding of distributed systems is impressive.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          I've seen Prathibha automate pipelines and build secure apps with ease. Her attention to security and CI/CD best practices stands out.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          She brings both technical depth and user-focused design into her work. A fantastic developer with leadership potential.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Home Icon -->
+    <div class="iconbutton">
+      <a href="#home">
+        <img src="html_finalprojimages/home.png" alt="Home"/>
+      </a>
+    </div>
+
+    <!-- Pop-up Confirmation -->
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>Thank you for your recommendation!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
