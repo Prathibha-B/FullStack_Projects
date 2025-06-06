@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prathibha Boyapalli - Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Prathibha Boyapalli
+          <div class="contact_info">
+            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+            boyapalliprathibha306@gmail.com
+          </div>
+          <div style="clear:both;"></div>
+          <div class="contact_info">
+            <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+            +1 (463)-273-6225
+          </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://miro.medium.com/max/1400/1*qdAW1TjCN57h1lbuuzvchg.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Prathibha Boyapalli! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
+          </h1>
+          <p>
+            I am a Master's student in Computer Science at the University of Michigan with industry experience as a Programmer Analyst at Cognizant. 
+            I specialize in full-stack development, security, and distributed systems. 
+            I've built secure authentication systems, sharded key-value stores, and worked on gRPC-based networking layers. 
+            My toolset includes Java, Spring Boot, Liferay, Jenkins, and front-end tech like HTML, CSS, and JavaScript.
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="html_finalprojimages/html5.png"/>
+          <h6>HTML</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <!-- Add more skills here -->
+        <div class="skill">
+          <img src="html_finalprojimages/java.png"/>
+          <h6>Java</h6>
+          <p>4 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="html_finalprojimages/css3.png"/>
+          <h6>CSS</h6>
+          <p>3 years experience</p>
+        </div>  
+        <div class="skill">
+          <img src="html_finalprojimages/node.png"/>
+          <h6>Node Js</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="html_finalprojimages/react.png"/>
+          <h6>React</h6>
+          <p>1 year experience</p>
+        </div>
+      </div>
+    </section>
+      
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>AuthGuard - Secure Identification System</h3>
+            <ul>
+              <li>Built a secure authentication system using Java, Spring Boot, and Hibernate ORM integrated with MySQL</li>
+              <li>Developed third-party identity validation APIs and responsive UI using HTML, CSS, JavaScript, and Bootstrap</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Sharded Key-Value Store</h3>
+            <ul>
+              <li>Implemented a distributed, fault-tolerant store using Java, Raft consensus algorithm, and SQLite</li>
+              <li>Achieved 99.99% uptime with dynamic sharding and replication</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>gRPC Network Layer for Distributed System</h3>
+            <ul>
+              <li>Created a scalable gRPC layer in C++ to handle 50+ concurrent clients and optimized inter-process communication</li>
+              <li>Improved latency by 35% and added worker health monitoring features</li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Prathibha is a proactive and detail-oriented developer who excels in both backend architecture and frontend design. Her work in Liferay and Spring Boot has significantly improved system performance.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Prathibha at Cognizant was a rewarding experience. She is skilled in identifying and resolving security vulnerabilities and automating CI/CD pipelines.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Prathibha’s ability to design scalable distributed systems and contribute to full-stack features makes her an asset to any team. Her curiosity and initiative are truly commendable.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3>Thank you for your recommendation!</h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
+</html>
